@@ -1,4 +1,14 @@
-from pandas.io.json import json_normalize
+import plotly
+import plotly.graph_objs as go
+
+plotly.offline.init_notebook_mode(connected=True)
+
+plotly.offline.iplot({
+    "data": [go.Scatter(x=[1, 2, 3, 4], y=[4, 3, 2, 1])],
+    "layout": go.Layout(title="hello world")
+})
+
+"""from pandas.io.json import json_normalize
 import pandas as pd
 import requests
 import matplotlib.pyplot as plt
@@ -56,3 +66,7 @@ layout = go.Layout(
 
 fig = go.Figure(data=data, layout=layout)
 py.iplot(fig, filename='basic-area-no-bound')
+"""
+
+
+
